@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 @font-face {
   font-family: "CK7";
   src: url("../Recursos/Fuentes/Cyberfunk.ttf");
@@ -5,6 +6,9 @@
 body{
     background-color: black;
     color: green;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 nav{
     display: flex;
@@ -26,7 +30,7 @@ nav div{
     display: flex;
     width: fit-content;
 }
-a{
+a,summary{
     transition-duration: 1s;
     text-decoration: none;
     font-family: 'CK7';
@@ -36,7 +40,7 @@ a{
     border-radius: 200px;
     overflow: hidden;
 }
-a:hover{
+a:hover,summary:hover{
     background-color: white;
 }
 @keyframes colorchange {
@@ -48,7 +52,6 @@ a:hover{
     }
 }
 h1{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: green;
     text-align: center;
 }
@@ -56,9 +59,43 @@ h1{
 @media (max-width: 900px) {
     .songs{
         flex-direction: column;
-    }  
+    } 
+    .hidden-on-mobile{
+        display: none;
+    } 
+    nav img {
+        width: 50%;
+    }
+}
+@media (min-width: 900px){
+    .hidden-on-desktop{
+        display: none;
+    }
+
 }
 .songs{
     display: flex;
     gap: 1rem;
+}
+
+details div {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.689);
+    text-align: center;
+    border-radius: 1rem;
+}
+summary {
+  list-style: none;       /* Firefox, algunos navegadores */
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;          /* Chrome, Safari, Edge */
+}
+summary::marker {
+  display: none;          /* Estándar (Firefox moderno, otros) */
 }
