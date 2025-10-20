@@ -15,6 +15,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
+    padding-inline: 1rem;
 }
 nav img{
     object-fit: fill;
@@ -40,7 +41,7 @@ a,summary{
     border-radius: 200px;
     overflow: hidden;
 }
-a:hover,summary:hover{
+nav a:hover,summary:hover{
     background-color: white;
 }
 @keyframes colorchange {
@@ -51,6 +52,7 @@ a:hover,summary:hover{
         background-color: white;
     }
 }
+/* MAIN */
 h1{
     color: green;
     text-align: center;
@@ -75,6 +77,8 @@ h1{
 }
 .songs{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -98,4 +102,101 @@ summary::-webkit-details-marker {
 }
 summary::marker {
   display: none;          /* Estándar (Firefox moderno, otros) */
+}
+main{
+    display: flex;
+    padding-inline: 20px;
+}
+
+
+section{
+    width: 70%;
+    align-items: center;
+}
+section{
+    padding-inline: 1rem;
+}
+.intro-pres{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.intro-pres iframe{
+    border-radius: 20px;
+    width: 100%;
+}
+.pres{
+    margin-left: 1rem;
+    width: 100%;
+}
+aside{
+    width: 30%;
+    padding-inline: 1rem;
+    align-items: center;
+}
+aside iframe{
+    margin:0;
+    padding: 0;
+}
+section h1{
+    border-bottom: 1px solid white;
+}
+aside h1{
+    border-bottom: 1px solid white;
+}
+.contacto{
+    width: 100%;
+    text-align: center;
+    font-style: bold;
+}
+.contacto span{
+    font-size: 30px;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.redes a{
+    background-color: white;
+    border-radius: 1rem;
+}
+@media (max-width: 700px) {
+    .intro-pres{
+        flex-wrap: wrap;
+    } 
+}
+@media (max-width: 900px) {
+    main{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    aside{
+        width: 100%;
+    }
+    aside iframe{
+        width: 100%;
+        height: 50%;
+    }
+    .contacto{
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .redes{
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+/* FOOTER */
+footer{
+    margin-top: 1rem;
+    border-top: 1px solid white;
+    text-align: center;
+}
+footer span{
+    font-size: 15px;
 }
