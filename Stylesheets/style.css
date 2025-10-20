@@ -75,13 +75,6 @@ h1{
     }
 
 }
-.songs{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
 details div {
     flex-direction: column;
     position: absolute;
@@ -93,22 +86,21 @@ details div {
     border-radius: 1rem;
 }
 summary {
-  list-style: none;       /* Firefox, algunos navegadores */
-  cursor: pointer;
+    list-style: none;       /* Firefox, algunos navegadores */
+    cursor: pointer;
 }
 
 summary::-webkit-details-marker {
-  display: none;          /* Chrome, Safari, Edge */
+    display: none;          /* Chrome, Safari, Edge */
 }
 summary::marker {
-  display: none;          /* Estándar (Firefox moderno, otros) */
+    display: none;          /* Estándar (Firefox moderno, otros) */
 }
+/* COMIENZA MAIN */
 main{
     display: flex;
     padding-inline: 20px;
 }
-
-
 section{
     width: 70%;
     align-items: center;
@@ -131,7 +123,6 @@ section{
 }
 aside{
     width: 30%;
-    padding-inline: 1rem;
     align-items: center;
 }
 aside iframe{
@@ -143,6 +134,12 @@ section h1{
 }
 aside h1{
     border-bottom: 1px solid white;
+}
+.songs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .contacto{
     width: 100%;
@@ -173,12 +170,15 @@ aside h1{
         flex-wrap: wrap;
         align-items: center;
     }
+    section{
+        width: 100%;
+        text-align: center;
+    }
     aside{
         width: 100%;
     }
     aside iframe{
         width: 100%;
-        height: 50%;
     }
     .contacto{
         align-items: center;
