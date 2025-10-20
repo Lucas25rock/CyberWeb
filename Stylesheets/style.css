@@ -164,9 +164,8 @@ aside h1{
 }
 @media (max-width: 900px) {
     main{
-        flex-direction: column;
+        padding-inline: 0;
         flex-wrap: wrap;
-        align-items: center;
     }
     section{
         width: 100%;
