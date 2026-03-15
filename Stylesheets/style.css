@@ -11,7 +11,7 @@ body{
     font-style: normal;
 }
 nav{
-    display: flex;1
+    display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
@@ -223,6 +223,23 @@ aside h1{
         width: 100%;
         flex-wrap: wrap;  
     }
+}
+.nuevas-cosas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+}
+#video-program{
+    width: 45%;
+    border-radius: 20px;
+}
+@media (max-width: 900px){
+    .nuevas-cosas{
+        flex-direction: column;
+    }
+
 }
 /* FOOTER */
 footer{
